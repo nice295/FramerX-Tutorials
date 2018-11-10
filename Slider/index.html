@@ -1,0 +1,453 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<script src="build/react.development.js"></script>
+	<script src="build/react-dom.development.js"></script>
+	<script src="build/framer.js"></script>
+
+	<link href="build/Draft.css" rel="stylesheet" />
+	<link href="build/style.css" rel="stylesheet" />
+
+    <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+    <style>
+        @font-face {
+            font-family: "Roboto Mono";
+            font-style: normal;
+            font-weight: 400;
+            src: local("Roboto Mono"), local("RobotoMono-Regular"), url("fonts/RobotoMono-Regular.ttf") format("truetype");
+        }
+    </style>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main></main>
+	<script src="build/standalone.js"></script>
+	
+	<script id="build_index_js">
+	(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("framer"), require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define(["framer", "react"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("framer"), require("react")) : factory(root["Framer"], root["React"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE_framer__, __WEBPACK_EXTERNAL_MODULE_react__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		try { modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); } catch (error) { module.exports = { error } }
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// asset url
+/******/ 	var __module_i = eval("typeof module !== 'undefined' ? module.i : ''");
+/******/ 	var __framer_package = (/(node_modules[/].*)[/]build.index.js/.exec(__module_i) || [])[1]
+/******/ 	function __asset_url__(src) { return __WEBPACK_EXTERNAL_MODULE_framer__.serverURL(__framer_package, src) };
+/******/ 	installedModules['framer/resource'] = { i: 'framer/resource', l: true, exports: { url: __asset_url__ } };
+/******/
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./package.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./code sync recursive \\.(t|j)s(x?)|\\.css$":
+/*!***************************************!*\
+  !*** ./code sync \.(t|j)s(x?)|\.css$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./App.tsx": "./code/App.tsx",
+	"./Examples.tsx": "./code/Examples.tsx",
+	"./Slider.tsx": "./code/Slider.tsx",
+	"./canvas.tsx": "./code/canvas.tsx"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./code sync recursive \\.(t|j)s(x?)|\\.css$";
+
+/***/ }),
+
+/***/ "./code/App.tsx":
+/*!**********************!*\
+  !*** ./code/App.tsx ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst data = framer_1.Data({\n    value: \"100\"\n});\nexports.Slider = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onValueChange: (value) => {\n            window[\"__checkBudget__\"]();\n            console.log(value);\n            let roundedValue = Math.floor(value);\n            data.value = roundedValue.toString();\n        }\n    };\n};\nexports.SliderValue = props => {\n    window[\"__checkBudget__\"]();\n    return {\n        text: data.value\n    };\n};\nexports.__info__ = [{ name: \"Slider\", type: \"override\" }, { name: \"SliderValue\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSw4Q0FBOEMsY0FBYztBQUM1RDtBQUNBO0FBQ0E7QUFDQSxDQUFDO0FBQ0Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFCQUFxQixtQ0FBbUMsR0FBRyx3Q0FBd0MiLCJmaWxlIjoiLi9jb2RlL0FwcC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IGZyYW1lcl8xID0gcmVxdWlyZShcImZyYW1lclwiKTtcbmNvbnN0IGRhdGEgPSBmcmFtZXJfMS5EYXRhKHtcbiAgICB2YWx1ZTogXCIxMDBcIlxufSk7XG5leHBvcnRzLlNsaWRlciA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvblZhbHVlQ2hhbmdlOiAodmFsdWUpID0+IHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgY29uc29sZS5sb2codmFsdWUpO1xuICAgICAgICAgICAgbGV0IHJvdW5kZWRWYWx1ZSA9IE1hdGguZmxvb3IodmFsdWUpO1xuICAgICAgICAgICAgZGF0YS52YWx1ZSA9IHJvdW5kZWRWYWx1ZS50b1N0cmluZygpO1xuICAgICAgICB9XG4gICAgfTtcbn07XG5leHBvcnRzLlNsaWRlclZhbHVlID0gcHJvcHMgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIHRleHQ6IGRhdGEudmFsdWVcbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcIlNsaWRlclwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIlNsaWRlclZhbHVlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9XTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./code/App.tsx\n");
+
+/***/ }),
+
+/***/ "./code/Examples.tsx":
+/*!***************************!*\
+  !*** ./code/Examples.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst data = framer_1.Data({ toggle: true, scale: framer_1.Animatable(1), opacity: framer_1.Animatable(1), rotation: framer_1.Animatable(0), rotationY: framer_1.Animatable(0) });\nexports.Scale = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        scale: data.scale,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            data.scale.set(0.6);\n            framer_1.animate.spring(data.scale, 1);\n        },\n    };\n};\nexports.Rotate = props => {\n    window[\"__checkBudget__\"]();\n    data.rotation.set(props.rotation);\n    return {\n        rotation: data.rotation,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.spring(data.rotation, data.rotation.get() + 90, {\n                tension: 250,\n                friction: 20,\n            });\n        },\n    };\n};\nexports.Fade = props => {\n    window[\"__checkBudget__\"]();\n    data.opacity.set(props.opacity);\n    return {\n        opacity: data.opacity,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.linear(data.opacity, 0, 0.2);\n        },\n    };\n};\nexports.FlipOutput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        rotationY: data.rotationY,\n    };\n};\nexports.FlipInput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            const toggle = data.toggle;\n            framer_1.animate.spring({ rotationY: data.rotationY }, {\n                rotationY: toggle ? 360 : 0,\n            }, { tension: 200, friction: 20 });\n            data.toggle = !toggle;\n        },\n    };\n};\nexports.__info__ = [{ name: \"Scale\", type: \"override\" }, { name: \"Rotate\", type: \"override\" }, { name: \"Fade\", type: \"override\" }, { name: \"FlipOutput\", type: \"override\" }, { name: \"FlipInput\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0V4YW1wbGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLDhDQUE4QyxjQUFjO0FBQzVEO0FBQ0EsNEJBQTRCLG9KQUFvSjtBQUNoTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7QUFDYixTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFDQUFxQyw0QkFBNEI7QUFDakU7QUFDQSxhQUFhLEdBQUcsNkJBQTZCO0FBQzdDO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQSxxQkFBcUIsa0NBQWtDLEdBQUcsbUNBQW1DLEdBQUcsaUNBQWlDLEdBQUcsdUNBQXVDLEdBQUcsc0NBQXNDIiwiZmlsZSI6Ii4vY29kZS9FeGFtcGxlcy50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IGZyYW1lcl8xID0gcmVxdWlyZShcImZyYW1lclwiKTtcbmNvbnN0IGRhdGEgPSBmcmFtZXJfMS5EYXRhKHsgdG9nZ2xlOiB0cnVlLCBzY2FsZTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgb3BhY2l0eTogZnJhbWVyXzEuQW5pbWF0YWJsZSgxKSwgcm90YXRpb246IGZyYW1lcl8xLkFuaW1hdGFibGUoMCksIHJvdGF0aW9uWTogZnJhbWVyXzEuQW5pbWF0YWJsZSgwKSB9KTtcbmV4cG9ydHMuU2NhbGUgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgc2NhbGU6IGRhdGEuc2NhbGUsXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBkYXRhLnNjYWxlLnNldCgwLjYpO1xuICAgICAgICAgICAgZnJhbWVyXzEuYW5pbWF0ZS5zcHJpbmcoZGF0YS5zY2FsZSwgMSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLlJvdGF0ZSA9IHByb3BzID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICBkYXRhLnJvdGF0aW9uLnNldChwcm9wcy5yb3RhdGlvbik7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb246IGRhdGEucm90YXRpb24sXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLnJvdGF0aW9uLCBkYXRhLnJvdGF0aW9uLmdldCgpICsgOTAsIHtcbiAgICAgICAgICAgICAgICB0ZW5zaW9uOiAyNTAsXG4gICAgICAgICAgICAgICAgZnJpY3Rpb246IDIwLFxuICAgICAgICAgICAgfSk7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZhZGUgPSBwcm9wcyA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgZGF0YS5vcGFjaXR5LnNldChwcm9wcy5vcGFjaXR5KTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvcGFjaXR5OiBkYXRhLm9wYWNpdHksXG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLmxpbmVhcihkYXRhLm9wYWNpdHksIDAsIDAuMik7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLkZsaXBPdXRwdXQgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSxcbiAgICB9O1xufTtcbmV4cG9ydHMuRmxpcElucHV0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB0b2dnbGUgPSBkYXRhLnRvZ2dsZTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKHsgcm90YXRpb25ZOiBkYXRhLnJvdGF0aW9uWSB9LCB7XG4gICAgICAgICAgICAgICAgcm90YXRpb25ZOiB0b2dnbGUgPyAzNjAgOiAwLFxuICAgICAgICAgICAgfSwgeyB0ZW5zaW9uOiAyMDAsIGZyaWN0aW9uOiAyMCB9KTtcbiAgICAgICAgICAgIGRhdGEudG9nZ2xlID0gIXRvZ2dsZTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcIlNjYWxlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiUm90YXRlXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwiRmFkZVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIkZsaXBPdXRwdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJGbGlwSW5wdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH1dO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./code/Examples.tsx\n");
+
+/***/ }),
+
+/***/ "./code/Slider.tsx":
+/*!*************************!*\
+  !*** ./code/Slider.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst React = __webpack_require__(/*! react */ \"react\");\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst modulate = (value, r1, r2) => {\n    window[\"__checkBudget__\"]();\n    return ((value - r1[0]) * (r2[1] - r2[0])) / (r1[1] - r1[0]) + r2[0];\n};\nclass Slider extends React.Component {\n    constructor() {\n        super(...arguments);\n        this.state = {\n            value: Slider.defaultProps.value,\n            propsValue: Slider.defaultProps.value,\n            knobOffset: 0\n        };\n        this.onMove = (event) => {\n            window[\"__checkBudget__\"]();\n            const { onValueChange } = this.props;\n            const value = this.pointToValue(event.x);\n            this.setState({ value });\n            console.log(\"onValueChange: \" + onValueChange);\n            if (onValueChange) {\n                console.log(\"value: \" + value);\n                onValueChange(value);\n            }\n        };\n        this.onClick = event => {\n            window[\"__checkBudget__\"]();\n            const { knobSize, onValueChange, max, min } = this.props;\n            let value = this.pointToValue(event.point.x - knobSize / 2);\n            if (value < min) {\n                value = min;\n            }\n            else if (value > max) {\n                value = max;\n            }\n            this.setState({ value });\n            if (onValueChange) {\n                onValueChange(value);\n            }\n        };\n        this.valueToPoint = value => {\n            window[\"__checkBudget__\"]();\n            const { min, max, width, constrained, knobSize } = this.props;\n            if (constrained) {\n                return modulate(value, [min, max], [0, width - knobSize]);\n            }\n            else {\n                return modulate(value, [min, max], [-knobSize / 2, width - knobSize / 2]);\n            }\n        };\n        this.pointToValue = point => {\n            window[\"__checkBudget__\"]();\n            const { min, max, width, constrained, knobSize } = this.props;\n            if (constrained) {\n                return modulate(point, [0, width - knobSize], [min, max]);\n            }\n            else {\n                return modulate(point, [-knobSize / 2, width - knobSize / 2], [min, max]);\n            }\n        };\n    }\n    componentDidMount() {\n        window[\"__checkBudget__\"]();\n        const { value, onValueChange } = this.props;\n        this.setState({ value });\n        if (onValueChange) {\n            onValueChange(value);\n        }\n    }\n    static getDerivedStateFromProps(props, state) {\n        window[\"__checkBudget__\"]();\n        return {\n            propsValue: props.value,\n            value: props.value !== state.propsValue ? props.value : state.value\n        };\n    }\n    render() {\n        window[\"__checkBudget__\"]();\n        const { knob, track, tint, width, height, knobSize, trackHeight, constrained, min, max } = this.props;\n        let left = this.valueToPoint(max);\n        let ratio = (left + knobSize / 2) / width;\n        if (this.state.value < max) {\n            left = this.valueToPoint(this.state.value);\n            ratio = (left + knobSize / 2) / width;\n        }\n        if (min > this.state.value) {\n            ratio = this.valueToPoint(min) / width;\n            left = this.valueToPoint(min);\n        }\n        if (min === max && max < this.state.value) {\n            ratio = 1;\n            if (constrained) {\n                left = width - knobSize;\n            }\n            else {\n                left = width - knobSize / 2;\n            }\n        }\n        if ((min === max && max > this.state.value) ||\n            (min === max && min === this.state.value)) {\n            ratio = 0;\n            if (constrained) {\n                left = 0;\n            }\n            else {\n                left = -knobSize / 2;\n            }\n        }\n        const constraintsX = constrained ? 0 : -knobSize / 2;\n        const constraintsWidth = constrained ? width : width + knobSize;\n        if (ratio > 1) {\n            ratio = 1;\n        }\n        else if (ratio < 0) {\n            ratio = 0;\n        }\n        const constraints = {\n            x: constraintsX,\n            y: height / 2 - knobSize / 2,\n            width: constraintsWidth,\n            height: knobSize\n        };\n        return (React.createElement(React.Fragment, null,\n            React.createElement(framer_1.Frame, { left: 0, clip: true, height: trackHeight, width: width, top: (height - trackHeight) / 2, background: track, radius: 50, onClick: this.onClick, overflow: \"hidden\" },\n                React.createElement(framer_1.Frame, { width: `${ratio * 100}%`, top: 0, left: 0, bottom: 0, background: tint, radius: 50 })),\n            React.createElement(framer_1.Draggable, { width: knobSize, height: knobSize, constraints: constraints, bounce: false, overdrag: false, onMove: this.onMove, horizontal: true, vertical: false, left: left, top: height / 2 - this.props.knobSize / 2, background: knob, radius: \"50%\", shadows: [\n                    {\n                        inset: false,\n                        color: `${this.props.shadow}`,\n                        x: 0,\n                        y: 1,\n                        blur: 2,\n                        spread: 0\n                    },\n                    {\n                        inset: false,\n                        color: `${this.props.shadow}`,\n                        x: 0,\n                        y: 2,\n                        blur: 4,\n                        spread: 0\n                    },\n                    {\n                        inset: false,\n                        color: `${this.props.shadow}`,\n                        x: 0,\n                        y: 4,\n                        blur: 8,\n                        spread: 0\n                    }\n                ] })));\n    }\n}\nSlider.defaultProps = {\n    width: 120,\n    height: 44,\n    value: 50,\n    knob: \"white\",\n    track: \"#DDD\",\n    tint: \"#09F\",\n    min: 0,\n    max: 100,\n    knobSize: 30,\n    shadow: \"rgba(0,0,0,0.1)\",\n    trackHeight: 2,\n    constrained: false\n};\nSlider.propertyControls = {\n    tint: { type: framer_1.ControlType.Color, title: \"Tint\" },\n    track: { type: framer_1.ControlType.Color, title: \"Track\" },\n    shadow: { type: framer_1.ControlType.Color, title: \"Shadow\" },\n    min: { type: framer_1.ControlType.Number, title: \"Min\", min: 0 },\n    max: { type: framer_1.ControlType.Number, title: \"Max\", min: 0, max: 360 },\n    value: { type: framer_1.ControlType.Number, title: \"Value\", min: 0, max: 360 },\n    knobSize: { type: framer_1.ControlType.Number, title: \"Knob\", min: 20, max: 50 },\n    trackHeight: {\n        type: framer_1.ControlType.Number,\n        title: \"Height\",\n        min: 1,\n        max: 10\n    },\n    constrained: { type: framer_1.ControlType.Boolean, title: \"Constrain\" }\n};\nexports.Slider = Slider;\nexports.__info__ = [{ name: \"Slider\", children: false, type: \"component\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL1NsaWRlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSw4Q0FBOEMsY0FBYztBQUM1RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQixnQkFBZ0I7QUFDbkM7QUFDQSwyQkFBMkIsUUFBUTtBQUNuQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1CLG9DQUFvQztBQUN2RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDJCQUEyQixRQUFRO0FBQ25DO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQix5Q0FBeUM7QUFDNUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1CLHlDQUF5QztBQUM1RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsdUJBQXVCO0FBQ3RDLHVCQUF1QixRQUFRO0FBQy9CO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxpRkFBaUY7QUFDaEc7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlEQUFpRCxvS0FBb0s7QUFDck4scURBQXFELFdBQVcsWUFBWSw4REFBOEQ7QUFDMUkscURBQXFEO0FBQ3JEO0FBQ0E7QUFDQSxrQ0FBa0Msa0JBQWtCO0FBQ3BEO0FBQ0E7QUFDQTtBQUNBO0FBQ0EscUJBQXFCO0FBQ3JCO0FBQ0E7QUFDQSxrQ0FBa0Msa0JBQWtCO0FBQ3BEO0FBQ0E7QUFDQTtBQUNBO0FBQ0EscUJBQXFCO0FBQ3JCO0FBQ0E7QUFDQSxrQ0FBa0Msa0JBQWtCO0FBQ3BEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQkFBbUI7QUFDbkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsa0RBQWtEO0FBQzdELFlBQVksbURBQW1EO0FBQy9ELGFBQWEsb0RBQW9EO0FBQ2pFLFVBQVUsMERBQTBEO0FBQ3BFLFVBQVUsb0VBQW9FO0FBQzlFLFlBQVksc0VBQXNFO0FBQ2xGLGVBQWUscUVBQXFFO0FBQ3BGO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0wsa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxxQkFBcUIscURBQXFEIiwiZmlsZSI6Ii4vY29kZS9TbGlkZXIudHN4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XG5jb25zdCBSZWFjdCA9IHJlcXVpcmUoXCJyZWFjdFwiKTtcbmNvbnN0IGZyYW1lcl8xID0gcmVxdWlyZShcImZyYW1lclwiKTtcbmNvbnN0IG1vZHVsYXRlID0gKHZhbHVlLCByMSwgcjIpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4gKCh2YWx1ZSAtIHIxWzBdKSAqIChyMlsxXSAtIHIyWzBdKSkgLyAocjFbMV0gLSByMVswXSkgKyByMlswXTtcbn07XG5jbGFzcyBTbGlkZXIgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICAgIGNvbnN0cnVjdG9yKCkge1xuICAgICAgICBzdXBlciguLi5hcmd1bWVudHMpO1xuICAgICAgICB0aGlzLnN0YXRlID0ge1xuICAgICAgICAgICAgdmFsdWU6IFNsaWRlci5kZWZhdWx0UHJvcHMudmFsdWUsXG4gICAgICAgICAgICBwcm9wc1ZhbHVlOiBTbGlkZXIuZGVmYXVsdFByb3BzLnZhbHVlLFxuICAgICAgICAgICAga25vYk9mZnNldDogMFxuICAgICAgICB9O1xuICAgICAgICB0aGlzLm9uTW92ZSA9IChldmVudCkgPT4ge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB7IG9uVmFsdWVDaGFuZ2UgfSA9IHRoaXMucHJvcHM7XG4gICAgICAgICAgICBjb25zdCB2YWx1ZSA9IHRoaXMucG9pbnRUb1ZhbHVlKGV2ZW50LngpO1xuICAgICAgICAgICAgdGhpcy5zZXRTdGF0ZSh7IHZhbHVlIH0pO1xuICAgICAgICAgICAgY29uc29sZS5sb2coXCJvblZhbHVlQ2hhbmdlOiBcIiArIG9uVmFsdWVDaGFuZ2UpO1xuICAgICAgICAgICAgaWYgKG9uVmFsdWVDaGFuZ2UpIHtcbiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhcInZhbHVlOiBcIiArIHZhbHVlKTtcbiAgICAgICAgICAgICAgICBvblZhbHVlQ2hhbmdlKHZhbHVlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfTtcbiAgICAgICAgdGhpcy5vbkNsaWNrID0gZXZlbnQgPT4ge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB7IGtub2JTaXplLCBvblZhbHVlQ2hhbmdlLCBtYXgsIG1pbiB9ID0gdGhpcy5wcm9wcztcbiAgICAgICAgICAgIGxldCB2YWx1ZSA9IHRoaXMucG9pbnRUb1ZhbHVlKGV2ZW50LnBvaW50LnggLSBrbm9iU2l6ZSAvIDIpO1xuICAgICAgICAgICAgaWYgKHZhbHVlIDwgbWluKSB7XG4gICAgICAgICAgICAgICAgdmFsdWUgPSBtaW47XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIGlmICh2YWx1ZSA+IG1heCkge1xuICAgICAgICAgICAgICAgIHZhbHVlID0gbWF4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgdGhpcy5zZXRTdGF0ZSh7IHZhbHVlIH0pO1xuICAgICAgICAgICAgaWYgKG9uVmFsdWVDaGFuZ2UpIHtcbiAgICAgICAgICAgICAgICBvblZhbHVlQ2hhbmdlKHZhbHVlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfTtcbiAgICAgICAgdGhpcy52YWx1ZVRvUG9pbnQgPSB2YWx1ZSA9PiB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIGNvbnN0IHsgbWluLCBtYXgsIHdpZHRoLCBjb25zdHJhaW5lZCwga25vYlNpemUgfSA9IHRoaXMucHJvcHM7XG4gICAgICAgICAgICBpZiAoY29uc3RyYWluZWQpIHtcbiAgICAgICAgICAgICAgICByZXR1cm4gbW9kdWxhdGUodmFsdWUsIFttaW4sIG1heF0sIFswLCB3aWR0aCAtIGtub2JTaXplXSk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICByZXR1cm4gbW9kdWxhdGUodmFsdWUsIFttaW4sIG1heF0sIFsta25vYlNpemUgLyAyLCB3aWR0aCAtIGtub2JTaXplIC8gMl0pO1xuICAgICAgICAgICAgfVxuICAgICAgICB9O1xuICAgICAgICB0aGlzLnBvaW50VG9WYWx1ZSA9IHBvaW50ID0+IHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgY29uc3QgeyBtaW4sIG1heCwgd2lkdGgsIGNvbnN0cmFpbmVkLCBrbm9iU2l6ZSB9ID0gdGhpcy5wcm9wcztcbiAgICAgICAgICAgIGlmIChjb25zdHJhaW5lZCkge1xuICAgICAgICAgICAgICAgIHJldHVybiBtb2R1bGF0ZShwb2ludCwgWzAsIHdpZHRoIC0ga25vYlNpemVdLCBbbWluLCBtYXhdKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgICAgIHJldHVybiBtb2R1bGF0ZShwb2ludCwgWy1rbm9iU2l6ZSAvIDIsIHdpZHRoIC0ga25vYlNpemUgLyAyXSwgW21pbiwgbWF4XSk7XG4gICAgICAgICAgICB9XG4gICAgICAgIH07XG4gICAgfVxuICAgIGNvbXBvbmVudERpZE1vdW50KCkge1xuICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgY29uc3QgeyB2YWx1ZSwgb25WYWx1ZUNoYW5nZSB9ID0gdGhpcy5wcm9wcztcbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7IHZhbHVlIH0pO1xuICAgICAgICBpZiAob25WYWx1ZUNoYW5nZSkge1xuICAgICAgICAgICAgb25WYWx1ZUNoYW5nZSh2YWx1ZSk7XG4gICAgICAgIH1cbiAgICB9XG4gICAgc3RhdGljIGdldERlcml2ZWRTdGF0ZUZyb21Qcm9wcyhwcm9wcywgc3RhdGUpIHtcbiAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBwcm9wc1ZhbHVlOiBwcm9wcy52YWx1ZSxcbiAgICAgICAgICAgIHZhbHVlOiBwcm9wcy52YWx1ZSAhPT0gc3RhdGUucHJvcHNWYWx1ZSA/IHByb3BzLnZhbHVlIDogc3RhdGUudmFsdWVcbiAgICAgICAgfTtcbiAgICB9XG4gICAgcmVuZGVyKCkge1xuICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgY29uc3QgeyBrbm9iLCB0cmFjaywgdGludCwgd2lkdGgsIGhlaWdodCwga25vYlNpemUsIHRyYWNrSGVpZ2h0LCBjb25zdHJhaW5lZCwgbWluLCBtYXggfSA9IHRoaXMucHJvcHM7XG4gICAgICAgIGxldCBsZWZ0ID0gdGhpcy52YWx1ZVRvUG9pbnQobWF4KTtcbiAgICAgICAgbGV0IHJhdGlvID0gKGxlZnQgKyBrbm9iU2l6ZSAvIDIpIC8gd2lkdGg7XG4gICAgICAgIGlmICh0aGlzLnN0YXRlLnZhbHVlIDwgbWF4KSB7XG4gICAgICAgICAgICBsZWZ0ID0gdGhpcy52YWx1ZVRvUG9pbnQodGhpcy5zdGF0ZS52YWx1ZSk7XG4gICAgICAgICAgICByYXRpbyA9IChsZWZ0ICsga25vYlNpemUgLyAyKSAvIHdpZHRoO1xuICAgICAgICB9XG4gICAgICAgIGlmIChtaW4gPiB0aGlzLnN0YXRlLnZhbHVlKSB7XG4gICAgICAgICAgICByYXRpbyA9IHRoaXMudmFsdWVUb1BvaW50KG1pbikgLyB3aWR0aDtcbiAgICAgICAgICAgIGxlZnQgPSB0aGlzLnZhbHVlVG9Qb2ludChtaW4pO1xuICAgICAgICB9XG4gICAgICAgIGlmIChtaW4gPT09IG1heCAmJiBtYXggPCB0aGlzLnN0YXRlLnZhbHVlKSB7XG4gICAgICAgICAgICByYXRpbyA9IDE7XG4gICAgICAgICAgICBpZiAoY29uc3RyYWluZWQpIHtcbiAgICAgICAgICAgICAgICBsZWZ0ID0gd2lkdGggLSBrbm9iU2l6ZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgICAgIGxlZnQgPSB3aWR0aCAtIGtub2JTaXplIC8gMjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBpZiAoKG1pbiA9PT0gbWF4ICYmIG1heCA+IHRoaXMuc3RhdGUudmFsdWUpIHx8XG4gICAgICAgICAgICAobWluID09PSBtYXggJiYgbWluID09PSB0aGlzLnN0YXRlLnZhbHVlKSkge1xuICAgICAgICAgICAgcmF0aW8gPSAwO1xuICAgICAgICAgICAgaWYgKGNvbnN0cmFpbmVkKSB7XG4gICAgICAgICAgICAgICAgbGVmdCA9IDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICBsZWZ0ID0gLWtub2JTaXplIC8gMjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBjb25zdCBjb25zdHJhaW50c1ggPSBjb25zdHJhaW5lZCA/IDAgOiAta25vYlNpemUgLyAyO1xuICAgICAgICBjb25zdCBjb25zdHJhaW50c1dpZHRoID0gY29uc3RyYWluZWQgPyB3aWR0aCA6IHdpZHRoICsga25vYlNpemU7XG4gICAgICAgIGlmIChyYXRpbyA+IDEpIHtcbiAgICAgICAgICAgIHJhdGlvID0gMTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmIChyYXRpbyA8IDApIHtcbiAgICAgICAgICAgIHJhdGlvID0gMDtcbiAgICAgICAgfVxuICAgICAgICBjb25zdCBjb25zdHJhaW50cyA9IHtcbiAgICAgICAgICAgIHg6IGNvbnN0cmFpbnRzWCxcbiAgICAgICAgICAgIHk6IGhlaWdodCAvIDIgLSBrbm9iU2l6ZSAvIDIsXG4gICAgICAgICAgICB3aWR0aDogY29uc3RyYWludHNXaWR0aCxcbiAgICAgICAgICAgIGhlaWdodDoga25vYlNpemVcbiAgICAgICAgfTtcbiAgICAgICAgcmV0dXJuIChSZWFjdC5jcmVhdGVFbGVtZW50KFJlYWN0LkZyYWdtZW50LCBudWxsLFxuICAgICAgICAgICAgUmVhY3QuY3JlYXRlRWxlbWVudChmcmFtZXJfMS5GcmFtZSwgeyBsZWZ0OiAwLCBjbGlwOiB0cnVlLCBoZWlnaHQ6IHRyYWNrSGVpZ2h0LCB3aWR0aDogd2lkdGgsIHRvcDogKGhlaWdodCAtIHRyYWNrSGVpZ2h0KSAvIDIsIGJhY2tncm91bmQ6IHRyYWNrLCByYWRpdXM6IDUwLCBvbkNsaWNrOiB0aGlzLm9uQ2xpY2ssIG92ZXJmbG93OiBcImhpZGRlblwiIH0sXG4gICAgICAgICAgICAgICAgUmVhY3QuY3JlYXRlRWxlbWVudChmcmFtZXJfMS5GcmFtZSwgeyB3aWR0aDogYCR7cmF0aW8gKiAxMDB9JWAsIHRvcDogMCwgbGVmdDogMCwgYm90dG9tOiAwLCBiYWNrZ3JvdW5kOiB0aW50LCByYWRpdXM6IDUwIH0pKSxcbiAgICAgICAgICAgIFJlYWN0LmNyZWF0ZUVsZW1lbnQoZnJhbWVyXzEuRHJhZ2dhYmxlLCB7IHdpZHRoOiBrbm9iU2l6ZSwgaGVpZ2h0OiBrbm9iU2l6ZSwgY29uc3RyYWludHM6IGNvbnN0cmFpbnRzLCBib3VuY2U6IGZhbHNlLCBvdmVyZHJhZzogZmFsc2UsIG9uTW92ZTogdGhpcy5vbk1vdmUsIGhvcml6b250YWw6IHRydWUsIHZlcnRpY2FsOiBmYWxzZSwgbGVmdDogbGVmdCwgdG9wOiBoZWlnaHQgLyAyIC0gdGhpcy5wcm9wcy5rbm9iU2l6ZSAvIDIsIGJhY2tncm91bmQ6IGtub2IsIHJhZGl1czogXCI1MCVcIiwgc2hhZG93czogW1xuICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICBpbnNldDogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogYCR7dGhpcy5wcm9wcy5zaGFkb3d9YCxcbiAgICAgICAgICAgICAgICAgICAgICAgIHg6IDAsXG4gICAgICAgICAgICAgICAgICAgICAgICB5OiAxLFxuICAgICAgICAgICAgICAgICAgICAgICAgYmx1cjogMixcbiAgICAgICAgICAgICAgICAgICAgICAgIHNwcmVhZDogMFxuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICBpbnNldDogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogYCR7dGhpcy5wcm9wcy5zaGFkb3d9YCxcbiAgICAgICAgICAgICAgICAgICAgICAgIHg6IDAsXG4gICAgICAgICAgICAgICAgICAgICAgICB5OiAyLFxuICAgICAgICAgICAgICAgICAgICAgICAgYmx1cjogNCxcbiAgICAgICAgICAgICAgICAgICAgICAgIHNwcmVhZDogMFxuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICBpbnNldDogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogYCR7dGhpcy5wcm9wcy5zaGFkb3d9YCxcbiAgICAgICAgICAgICAgICAgICAgICAgIHg6IDAsXG4gICAgICAgICAgICAgICAgICAgICAgICB5OiA0LFxuICAgICAgICAgICAgICAgICAgICAgICAgYmx1cjogOCxcbiAgICAgICAgICAgICAgICAgICAgICAgIHNwcmVhZDogMFxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgXSB9KSkpO1xuICAgIH1cbn1cblNsaWRlci5kZWZhdWx0UHJvcHMgPSB7XG4gICAgd2lkdGg6IDEyMCxcbiAgICBoZWlnaHQ6IDQ0LFxuICAgIHZhbHVlOiA1MCxcbiAgICBrbm9iOiBcIndoaXRlXCIsXG4gICAgdHJhY2s6IFwiI0RERFwiLFxuICAgIHRpbnQ6IFwiIzA5RlwiLFxuICAgIG1pbjogMCxcbiAgICBtYXg6IDEwMCxcbiAgICBrbm9iU2l6ZTogMzAsXG4gICAgc2hhZG93OiBcInJnYmEoMCwwLDAsMC4xKVwiLFxuICAgIHRyYWNrSGVpZ2h0OiAyLFxuICAgIGNvbnN0cmFpbmVkOiBmYWxzZVxufTtcblNsaWRlci5wcm9wZXJ0eUNvbnRyb2xzID0ge1xuICAgIHRpbnQ6IHsgdHlwZTogZnJhbWVyXzEuQ29udHJvbFR5cGUuQ29sb3IsIHRpdGxlOiBcIlRpbnRcIiB9LFxuICAgIHRyYWNrOiB7IHR5cGU6IGZyYW1lcl8xLkNvbnRyb2xUeXBlLkNvbG9yLCB0aXRsZTogXCJUcmFja1wiIH0sXG4gICAgc2hhZG93OiB7IHR5cGU6IGZyYW1lcl8xLkNvbnRyb2xUeXBlLkNvbG9yLCB0aXRsZTogXCJTaGFkb3dcIiB9LFxuICAgIG1pbjogeyB0eXBlOiBmcmFtZXJfMS5Db250cm9sVHlwZS5OdW1iZXIsIHRpdGxlOiBcIk1pblwiLCBtaW46IDAgfSxcbiAgICBtYXg6IHsgdHlwZTogZnJhbWVyXzEuQ29udHJvbFR5cGUuTnVtYmVyLCB0aXRsZTogXCJNYXhcIiwgbWluOiAwLCBtYXg6IDM2MCB9LFxuICAgIHZhbHVlOiB7IHR5cGU6IGZyYW1lcl8xLkNvbnRyb2xUeXBlLk51bWJlciwgdGl0bGU6IFwiVmFsdWVcIiwgbWluOiAwLCBtYXg6IDM2MCB9LFxuICAgIGtub2JTaXplOiB7IHR5cGU6IGZyYW1lcl8xLkNvbnRyb2xUeXBlLk51bWJlciwgdGl0bGU6IFwiS25vYlwiLCBtaW46IDIwLCBtYXg6IDUwIH0sXG4gICAgdHJhY2tIZWlnaHQ6IHtcbiAgICAgICAgdHlwZTogZnJhbWVyXzEuQ29udHJvbFR5cGUuTnVtYmVyLFxuICAgICAgICB0aXRsZTogXCJIZWlnaHRcIixcbiAgICAgICAgbWluOiAxLFxuICAgICAgICBtYXg6IDEwXG4gICAgfSxcbiAgICBjb25zdHJhaW5lZDogeyB0eXBlOiBmcmFtZXJfMS5Db250cm9sVHlwZS5Cb29sZWFuLCB0aXRsZTogXCJDb25zdHJhaW5cIiB9XG59O1xuZXhwb3J0cy5TbGlkZXIgPSBTbGlkZXI7XG5leHBvcnRzLl9faW5mb19fID0gW3sgbmFtZTogXCJTbGlkZXJcIiwgY2hpbGRyZW46IGZhbHNlLCB0eXBlOiBcImNvbXBvbmVudFwiIH1dO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./code/Slider.tsx\n");
+
+/***/ }),
+
+/***/ "./code/canvas.tsx":
+/*!*************************!*\
+  !*** ./code/canvas.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// WARNING: this file is auto generated, any changes will be lost
+const framer_1 = __webpack_require__(/*! framer */ "framer");
+const canvas = framer_1.CanvasStore.shared(); // CANVAS_DATA;
+
+
+/***/ }),
+
+/***/ "./package.js":
+/*!********************!*\
+  !*** ./package.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// The template for the dynamic webpack entry. Be aware of the variables
+
+const packageJson = __webpack_require__(/*! ./package.json */ "./package.json")
+
+const package = {
+    packageJson,
+    sourceModules: {},
+    dependencies: {},
+}
+
+// This is a special webpack thing that watches the whole directory
+// https://github.com/webpack/docs/wiki/context
+const ctx = __webpack_require__("./code sync recursive \\.(t|j)s(x?)|\\.css$")
+
+ctx.keys().forEach(key => {
+    package.sourceModules[key] = () => ctx(key)
+})
+
+// The packages are passed in through a template
+const packages = {}
+
+                packages["framer"] = () => {
+                    var package = {}
+                    try {
+                        package = __webpack_require__(/*! framer */ "framer")
+                    } catch (e) {
+                        console.log(e)
+                    }
+                    package.__framer__ = package.__framer__ || {}
+                    package.__framer__.packageJson = {"name":"framer","version":"0.9.2","main":"build/framer.js","types":"build/framer.d.ts","author":"Framer","license":"MIT","scripts":{"coverage":"jest --config jest.json --coverage","test":"jest --config jest.json","watch":"jest --config jest.json --watch"},"dependencies":{"draft-js":"0.10.4","eventemitter3":"^3.1.0","hsluv":"^0.0.3","immutable":"^3.8.2"},"devDependencies":{"@types/chalk":"^2.2.0","@types/draft-js":"0.10.19","@types/enzyme":"^3.1.10","@types/hsluv":"https://github.com/framer/typed_hsluv#bump","@types/jest":"^23.0.0","@types/jest-diff":"^20.0.0","@types/node":"^9.6.0","@types/react":"^16.0.0","@types/react-dom":"^16.0.0","cache-loader":"^1.2.2","chalk":"^2.4.1","convert-tsconfig-paths-to-webpack-aliases":"^0.9.2","css.escape":"^1.5.1","dts-bundle":"^0.7.3","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","fork-ts-checker-webpack-plugin":"^0.4.1","hoist-non-react-statics":"^2.5.0","jest":"^23.1.0","jest-diff":"^22.0.3","jest-junit":"^3.4.1","progress-bar-webpack-plugin":"^1.11.0","raf":"^3.4.0","react":"^16.5.0","react-dev-utils":"^5.0.1","react-dom":"^16.5.0","ts-jest":"^22.4.5","ts-loader":"^4.1.0","typescript":"^3.0.1","watch":"^1.0.2","webpack":"^4.4.1","webpack-cli":"^2.0.13","webpack-dev-server":"^3.1.4","xcssmatrix":"^0.2.2"},"peerDependencies":{"react":"^16.5.0","react-dom":"^16.5.0"},"framer":{"components":[{"name":"Scroll","children":true,"properties":[{"key":"direction","title":"Direction","kind":"enum","options":["horizontal","vertical","both"]}]},{"name":"Page"},{"name":"Stack"},{"name":"FramerAppleWatch38","type":"device"},{"name":"FramerAppleWatch42","type":"device"},{"name":"FramerSonySmartWatch","type":"device"},{"name":"FramerAppleIPhoneSE","type":"device"},{"name":"FramerAppleIPhone8","type":"device"},{"name":"FramerAppleIPhone8Plus","type":"device"},{"name":"FramerAppleIPhoneX","type":"device"},{"name":"FramerGoogleNexus4","type":"device"},{"name":"FramerGoogleNexus5X","type":"device"},{"name":"FramerGoogleNexus6","type":"device"},{"name":"FramerGooglePixel2","type":"device"},{"name":"FramerGooglePixel2XL","type":"device"},{"name":"FramerHTCOneA9","type":"device"},{"name":"FramerMicrosoftLumia950","type":"device"},{"name":"FramerSamsungNote5","type":"device"},{"name":"FramerSamsungGalaxyS8","type":"device"},{"name":"FramerAppleIPadAir","type":"device"},{"name":"FramerAppleIPadMini","type":"device"},{"name":"FramerAppleIPadPro","type":"device"},{"name":"FramerGoogleNexusTablet","type":"device"},{"name":"FramerMicrosoftSurfacePro3","type":"device"},{"name":"FramerMicrosoftSurfacePro4","type":"device"},{"name":"FramerAppleIMac","type":"device"},{"name":"FramerAppleThunderboltDisplay","type":"device"},{"name":"FramerAppleMacBook","type":"device"},{"name":"FramerAppleMacBookAir","type":"device"},{"name":"FramerAppleMacBookPro","type":"device"},{"name":"FramerDellXPS","type":"device"},{"name":"FramerMicrosoftSurfaceBook","type":"device"},{"name":"FramerSonyW850C","type":"device"}]}}
+                    return package
+                }
+
+package.dependencies = packages
+
+exports.__framer__ = package
+
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: main, license, devDependencies, peerDependencies, framer, author, dependencies, default */
+/***/ (function(module) {
+
+module.exports = {"main":"build/index.js","license":"MIT","devDependencies":{"@types/react":"^16.4.16","framer":"^0.9.2"},"peerDependencies":{"framer":"^0.9.2","react":"^16.3.0","react-dom":"^16.3.0"},"framer":{"id":"29c824be-2566-4fc1-aeef-375cebc687d8"},"author":"Kyuho Lee","dependencies":{}};
+
+/***/ }),
+
+/***/ "framer":
+/*!******************************************************************************************!*\
+  !*** external {"root":"Framer","commonjs2":"framer","commonjs":"framer","amd":"framer"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
+
+/***/ }),
+
+/***/ "react":
+/*!**************************************************************************************!*\
+  !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
+
+/***/ })
+
+/******/ });
+});
+	</script>
+	
+	<script>
+	const data = {
+  "presentationNode": {
+    "componentClass": "Frame",
+    "props": {
+      "key": "j0sQTUVPk",
+      "id": "id_j0sQTUVPk",
+      "willChangeTransform": false,
+      "opacity": 1,
+      "radius": 0,
+      "rotation": 0,
+      "visible": true,
+      "overflow": "hidden",
+      "background": {
+        "r": 238,
+        "g": 68,
+        "b": 68,
+        "a": 1,
+        "h": 0,
+        "s": 0.8333333333333334,
+        "l": 0.6,
+        "initialValue": "#EE4444",
+        "roundA": 1,
+        "format": "rgb"
+      },
+      "shadows": [],
+      "left": 0,
+      "right": null,
+      "top": 0,
+      "bottom": null,
+      "width": 400,
+      "height": 400,
+      "aspectRatio": 1,
+      "centerX": "0%",
+      "centerY": "0%",
+      "parentSize": null
+    },
+    "children": [
+      {
+        "componentClass": "ComponentContainer",
+        "props": {
+          "key": "f0lhbWIPp",
+          "id": "id_f0lhbWIPp",
+          "willChangeTransform": false,
+          "rotation": 0,
+          "opacity": 1,
+          "componentIdentifier": "./Slider.tsx_Slider",
+          "background": null,
+          "visible": true,
+          "left": 40,
+          "right": 40,
+          "top": null,
+          "bottom": 41,
+          "width": 320,
+          "height": 88,
+          "aspectRatio": null,
+          "centerX": "50%",
+          "centerY": "78.75%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "./Slider.tsx_Slider",
+            "props": {
+              "tint": "#FF7744",
+              "track": "#DDD",
+              "shadow": "rgba(0,0,0,0.1)",
+              "min": 0,
+              "max": 100,
+              "value": 30,
+              "knobSize": 36,
+              "trackHeight": 8,
+              "constrained": false,
+              "placeholders": null,
+              "id": "f0lhbWIPp./Slider.tsx_Slider",
+              "key": "f0lhbWIPp./Slider.tsx_Slider"
+            },
+            "children": [],
+            "codeOverrideIdentifier": "./App.tsx_Slider"
+          }
+        ],
+        "codeOverrideIdentifier": "./App.tsx_Slider"
+      },
+      {
+        "componentClass": "Text",
+        "props": {
+          "key": "edzVqk8Rm",
+          "id": "id_edzVqk8Rm",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "autoSize": false,
+          "size": {
+            "width": 401,
+            "height": 124
+          },
+          "shadows": [],
+          "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"d0u47-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"d0u47-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:104px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">30</span></span></div></div>",
+          "alignment": "center",
+          "left": null,
+          "right": null,
+          "top": 82,
+          "bottom": null,
+          "width": 400,
+          "height": 124,
+          "aspectRatio": null,
+          "centerX": "50.24999999999999%",
+          "centerY": "36%",
+          "parentSize": null
+        },
+        "codeOverrideIdentifier": "./App.tsx_SliderValue"
+      }
+    ]
+  },
+  "metadata": {
+    "name": "Slider",
+    "id": "j0sQTUVPk",
+    "width": 400,
+    "height": 400,
+    "settings": {
+      "zoom": -1,
+      "rotate": false,
+      "bezel": false,
+      "responsive": false,
+      "touch": true,
+      "__class": "PreviewSettings"
+    }
+  },
+  "navigation": {}
+};
+	const $build_index_js = document.querySelector("#build_index_js")
+	const script = $build_index_js ? $build_index_js.textContent.trim() : ""
+	
+	// need react to have rendered, before we can do setPreviewData
+	setTimeout(() => {
+	    if (script.length > 0) {
+	        setPreviewData(script, data)
+	    } else {
+	        fetch("build/index.js").then((response) => {
+	            return response.text().then((script) => {
+	                setPreviewData(script, data)
+	            })
+	        })
+	    }
+	}, 0)
+	</script>
+</body>
+
+</html>
