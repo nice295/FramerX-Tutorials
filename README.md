@@ -1,4 +1,4 @@
-# framerx-Studuy
+# FramerX-Tutorials
 
 ### Medium Articles [Link](https://medium.com/@nice295/framer-x-tutorials-42a23e622040)
 
