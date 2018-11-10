@@ -1,6 +1,8 @@
-# framerx-export-site
+# framerx-Studuy
 
-### Top site: https://nice295.github.io/framerx-export-site
+### Medium Articles [Link](https://medium.com/@nice295/framer-x-tutorials-42a23e622040)
+
+### Export site: https://nice295.github.io/framerx-export-site
 
 ### Examples
 - [Scale](https://nice295.github.io/framerx-export-site/01.Scale/Scale/index.html)
