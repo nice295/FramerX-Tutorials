@@ -10,3 +10,4 @@
 - [Text Change](https://nice295.github.io/FramerX-Tutorials/03.TextChange/TextChange/index.html)
 - [Move](https://nice295.github.io/FramerX-Tutorials/04.Move/Move/index.html)
 - [Slider](https://nice295.github.io/FramerX-Tutorials/05.Slider/Slider/index.html)
+- [FirebaseTest](https://nice295.github.io/FramerX-Tutorials/06.FirebaseTest/FirebaseTest/index.html)
